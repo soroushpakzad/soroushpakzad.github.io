@@ -1,0 +1,340 @@
+/* ---------------------------------------------
+   Tokens
+--------------------------------------------- */
+:root {
+  --stone:      #E7E2D6;
+  --paper:      #F1EDE3;
+  --ink:        #1B1B17;
+  --ink-soft:   #4A4A42;
+  --forest:     #33513F;
+  --gold:       #A9813F;
+  --rule:       rgba(27, 27, 23, 0.14);
+
+  --font-display: "Fraunces", serif;
+  --font-body:    "IBM Plex Sans", sans-serif;
+
+  --max-width: 720px;
+  --edge: clamp(1.5rem, 5vw, 3rem);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--forest);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------
+   Header
+--------------------------------------------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem var(--edge);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.main-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--forest);
+}
+
+/* ---------------------------------------------
+   Layout shell
+--------------------------------------------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--edge);
+}
+
+section {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.contact {
+  border-bottom: none;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin: 0 0 2.25rem;
+  max-width: var(--max-width);
+}
+
+/* ---------------------------------------------
+   Hero
+--------------------------------------------- */
+.hero {
+  padding-top: 3.5rem;
+  padding-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: rise 0.7s ease-out forwards;
+}
+
+@keyframes rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-kicker {
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+  max-width: 14ch;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-sub {
+  max-width: var(--max-width);
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+/* ---------------------------------------------
+   Work / project list
+--------------------------------------------- */
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project {
+  display: flex;
+  gap: 1.75rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.project:first-child {
+  border-top: 1px solid var(--rule);
+}
+
+.project-index {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--gold);
+  padding-top: 0.2rem;
+  flex-shrink: 0;
+  width: 2ch;
+}
+
+.project-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.project-year {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.project-desc {
+  max-width: var(--max-width);
+  color: var(--ink-soft);
+  margin: 0.6rem 0 0.75rem;
+}
+
+.project-link {
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--forest);
+  padding-bottom: 1px;
+}
+
+/* ---------------------------------------------
+   About
+--------------------------------------------- */
+.about-text {
+  max-width: var(--max-width);
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+}
+
+.skills-list li {
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* ---------------------------------------------
+   Contact
+--------------------------------------------- */
+.contact-text {
+  max-width: var(--max-width);
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.contact-links a {
+  font-size: 1.05rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--forest);
+  padding-bottom: 1px;
+}
+
+.contact-form {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.form-row input,
+.form-row textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--stone);
+  color: var(--ink);
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: var(--forest);
+  color: var(--paper);
+  border: none;
+  border-radius: 3px;
+  padding: 0.8rem 1.6rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.contact-form button:hover {
+  background: #26392d;
+}
+
+/* ---------------------------------------------
+   Footer
+--------------------------------------------- */
+.site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem var(--edge) 3.5rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+/* ---------------------------------------------
+   Responsive
+--------------------------------------------- */
+@media (max-width: 640px) {
+  .project {
+    gap: 1rem;
+  }
+  .main-nav {
+    gap: 1.1rem;
+  }
+}

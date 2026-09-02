@@ -3,544 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seyed Soroush Pakzad — Structural Engineering Researcher</title>
-<meta name="description" content="Seyed Soroush Pakzad — Structural Engineering researcher working on Structural Health Monitoring, structural dynamics, artificial intelligence, and damage detection.">
+<title>[Your Name] — Portfolio</title>
+<meta name="description" content="[One-line description of what you do]">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#EEF0EA;
-    --paper-2:#E6E8E0;
-    --ink:#1B2430;
-    --muted:#5B6470;
-    --accent:#2E5C8A;
-    --accent-2:#B9631F;
-    --line:#C7C2B2;
-    --line-strong:#1B2430;
-    --max:760px;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
-  }
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size:16px;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px;}
-  a:hover{color:var(--accent-2);}
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--accent);
-    outline-offset:3px;
-  }
-
-  .skip-link{
-    position:absolute; left:-999px; top:auto;
-    background:var(--ink); color:var(--paper); padding:10px 16px;
-    z-index:100;
-  }
-  .skip-link:focus{ left:16px; top:16px; }
-
-  /* ---------- Title block (header) ---------- */
-  header.titleblock{
-    border-bottom:2px solid var(--line-strong);
-    background:var(--paper);
-  }
-  .titleblock-inner{
-    max-width:960px;
-    margin:0 auto;
-    padding:28px 24px 0 24px;
-  }
-  .titleblock-grid{
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:24px;
-    align-items:end;
-    padding-bottom:22px;
-    border-bottom:1px solid var(--line);
-  }
-  .name{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:clamp(2rem, 5vw, 3rem);
-    line-height:1.05;
-    margin:0 0 10px 0;
-    letter-spacing:-0.01em;
-  }
-  .tagline{
-    margin:0;
-    color:var(--muted);
-    font-size:0.95rem;
-    max-width:46ch;
-  }
-  .meta-block{
-    text-align:right;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    color:var(--muted);
-    line-height:1.7;
-    white-space:nowrap;
-  }
-  .meta-block strong{ color:var(--ink); font-weight:500; }
-
-  nav.primary{
-    max-width:960px;
-    margin:0 auto;
-    padding:0 24px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:2px 22px;
-  }
-  nav.primary a{
-    display:inline-block;
-    padding:12px 0 10px 0;
-    color:var(--ink);
-    font-size:0.85rem;
-    font-weight:600;
-    text-decoration:none;
-    border-bottom:2px solid transparent;
-  }
-  nav.primary a:hover{
-    border-bottom:2px solid var(--accent);
-    color:var(--ink);
-  }
-
-  /* ---------- Hero ---------- */
-  .hero{
-    max-width:960px;
-    margin:0 auto;
-    padding:56px 24px 48px 24px;
-    display:flex;
-    flex-direction:column;
-    gap:22px;
-  }
-  .hero-rule{
-    width:64px;
-    height:3px;
-    background:var(--accent);
-    border:none;
-    transform-origin:left;
-    animation:draw 0.7s ease-out 0.15s both;
-  }
-  @keyframes draw{
-    from{ transform:scaleX(0); }
-    to{ transform:scaleX(1); }
-  }
-  .hero p{
-    max-width:62ch;
-    font-size:1.08rem;
-    margin:0;
-  }
-  .hero-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-  }
-  .btn{
-    display:inline-block;
-    padding:10px 18px;
-    font-size:0.85rem;
-    font-weight:600;
-    text-decoration:none;
-    border:1.5px solid var(--line-strong);
-    color:var(--ink);
-  }
-  .btn.primary{
-    background:var(--ink);
-    color:var(--paper);
-    border-color:var(--ink);
-  }
-  .btn.primary:hover{ background:var(--accent); border-color:var(--accent); color:#fff; }
-  .btn:not(.primary):hover{ border-color:var(--accent); color:var(--accent); }
-
-  /* ---------- Sections ---------- */
-  main{
-    max-width:960px;
-    margin:0 auto;
-    padding:0 24px 40px 24px;
-  }
-  section{
-    padding:44px 0;
-    border-top:1px solid var(--line);
-    scroll-margin-top:24px;
-  }
-  .section-head{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:24px;
-    margin-bottom:26px;
-  }
-  .sheet-no{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.72rem;
-    color:var(--muted);
-    letter-spacing:0.04em;
-    padding-top:6px;
-  }
-  .sheet-no span{ display:block; color:var(--ink); font-size:0.9rem; margin-top:2px;}
-  h2{
-    font-family:'Fraunces', serif;
-    font-weight:500;
-    font-size:1.5rem;
-    margin:0;
-  }
-  .section-body{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:24px;
-  }
-  .section-body > .content{ max-width:64ch; }
-
-  /* About */
-  #about p{ margin:0 0 16px 0; }
-
-  /* Research tags */
-  .tag-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-  }
-  .tag-grid div{
-    background:var(--paper);
-    padding:14px 16px;
-    font-size:0.9rem;
-  }
-
-  /* Publications */
-  .pub{
-    padding:20px 0;
-    border-bottom:1px solid var(--line);
-  }
-  .pub:first-child{ padding-top:0; }
-  .pub:last-child{ border-bottom:none; }
-  .pub-year{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
-    color:var(--accent);
-    display:block;
-    margin-bottom:6px;
-  }
-  .pub h3{
-    font-family:'Public Sans', sans-serif;
-    font-weight:700;
-    font-size:1rem;
-    margin:0 0 6px 0;
-    line-height:1.4;
-  }
-  .pub .venue{
-    font-style:italic;
-    color:var(--muted);
-    font-size:0.9rem;
-  }
-  .pub p{ margin:8px 0 8px 0; font-size:0.92rem; }
-  .pub a{ font-size:0.85rem; font-weight:600; }
-  .pub.todo{
-    border:1px dashed var(--accent-2);
-    padding:16px;
-    background:var(--paper-2);
-  }
-  .pub.todo .flag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.7rem;
-    color:var(--accent-2);
-    text-transform:uppercase;
-    letter-spacing:0.05em;
-    display:block;
-    margin-bottom:8px;
-  }
-
-  /* Timeline (education / experience) */
-  .tl-item{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:24px;
-    padding:16px 0;
-  }
-  .tl-item:not(:last-child){ border-bottom:1px solid var(--line); }
-  .tl-date{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
-    color:var(--muted);
-    padding-top:2px;
-  }
-  .tl-item h3{
-    font-size:1rem;
-    margin:0 0 4px 0;
-    font-weight:700;
-  }
-  .tl-item .org{ color:var(--muted); font-size:0.9rem; margin-bottom:6px; display:block;}
-  .tl-item p{ margin:0; font-size:0.92rem; }
-
-  /* Skills */
-  .skills-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px 10px;
-    padding:0;
-    margin:0;
-    list-style:none;
-  }
-  .skills-list li{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
-    border:1px solid var(--line-strong);
-    padding:6px 10px;
-  }
-
-  /* Contact */
-  .contact-links{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px 22px;
-  }
-  .contact-links a{ font-weight:600; font-size:0.95rem; }
-
-  footer{
-    border-top:2px solid var(--line-strong);
-    padding:22px 24px;
-    text-align:center;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.75rem;
-    color:var(--muted);
-  }
-
-  @media (max-width:640px){
-    .titleblock-grid{ grid-template-columns:1fr; align-items:start; }
-    .meta-block{ text-align:left; }
-    .section-head, .section-body{ grid-template-columns:1fr; gap:8px; }
-    .sheet-no{ padding-top:0; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<div class="noise-overlay" aria-hidden="true"></div>
 
-<header class="titleblock">
-  <div class="titleblock-inner">
-    <div class="titleblock-grid">
-      <div>
-        <p class="name">Seyed Soroush Pakzad</p>
-        <p class="tagline">Structural engineering researcher working on structural health monitoring, structural dynamics, and AI-driven damage detection for civil infrastructure.</p>
-      </div>
-      <div class="meta-block">
-        <div><strong>Location</strong> Christchurch, NZ</div>
-        <div><strong>Field</strong> Structural Eng. / AI</div>
-        <div><strong>Status</strong> Open to PhD roles</div>
-      </div>
-    </div>
-  </div>
-  <nav class="primary" aria-label="Primary">
+<header class="site-header">
+  <a href="#top" class="wordmark">[Your Name]</a>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="#work">Work</a>
     <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main id="main">
+<main id="top">
 
-  <section class="hero" aria-label="Introduction">
-    <hr class="hero-rule">
-    <p>I hold an M.Sc. in Structural Engineering from Ferdowsi University of Mashhad, Iran. My work focuses on data-driven methods for understanding and monitoring civil infrastructure — structural health monitoring, vibration-based dynamics, and machine learning for damage detection — with the aim of catching structural problems earlier and more reliably than manual inspection allows.</p>
-    <div class="hero-links">
-      <a class="btn primary" href="assets/Soroush_Pakzad_CV.pdf">Download CV</a>
-      <a class="btn" href="#publications">View publications</a>
-      <a class="btn" href="#contact">Get in touch</a>
-    </div>
+  <section class="hero">
+    <p class="hero-kicker">[Your role, e.g. Product Designer based in Auckland]</p>
+    <h1 class="hero-headline">
+      [A one-sentence statement of what you make or do, written the way you'd actually say it out loud.]
+    </h1>
+    <p class="hero-sub">
+      [Optional second line — a bit more context: what kind of work, who for, what you care about.]
+    </p>
   </section>
 
-  <section id="about">
-    <div class="section-head">
-      <div class="sheet-no">SHEET 01<span>About</span></div>
-      <h2>About</h2>
-    </div>
-    <div class="section-body">
-      <div></div>
-      <div class="content">
-        <p>My recent work explores unsupervised and deep-learning approaches for early damage detection in bridges under environmental and operational variability — conditions like temperature swings and traffic load that can mask real structural damage in sensor data if not accounted for.</p>
-        <p>I'm currently based in Christchurch, New Zealand, and am looking to continue this research through further study, with particular interest in PhD opportunities in structural health monitoring and AI-enabled infrastructure.</p>
-      </div>
-    </div>
-  </section>
+  <section id="work" class="work">
+    <h2 class="section-heading">Selected work</h2>
 
-  <section id="research">
-    <div class="section-head">
-      <div class="sheet-no">SHEET 02<span>Research</span></div>
-      <h2>Research interests</h2>
-    </div>
-    <div class="section-body">
-      <div></div>
-      <div class="content">
-        <div class="tag-grid">
-          <div>Structural Health Monitoring</div>
-          <div>Structural Dynamics &amp; Vibration</div>
-          <div>AI for Civil Infrastructure</div>
-          <div>Damage Detection &amp; Prognostics</div>
-          <div>Digital Twins</div>
-          <div>Computational Mechanics &amp; FEM</div>
-          <div>Bridge Engineering</div>
-          <div>Machine Learning &amp; Deep Learning</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="section-head">
-      <div class="sheet-no">SHEET 03<span>Publications</span></div>
-      <h2>Selected publications</h2>
-    </div>
-    <div class="section-body">
-      <div></div>
-      <div class="content">
-
-        <div class="pub">
-          <span class="pub-year">2025</span>
-          <h3>Early Damage Detection in Bridges Using a Variational Autoencoder–Based Hybrid Unsupervised Learning Framework</h3>
-          <span class="venue">Scientific Reports</span>
-          <p>A hybrid unsupervised learning framework for early damage detection under environmental and operational variability.</p>
-          <a href="#">DOI / paper link (add yours)</a>
-        </div>
-
-        <div class="pub todo">
-          <span class="flag">Placeholder — needs your details</span>
-          <span class="pub-year">2024</span>
-          <h3>Add the exact publication title here</h3>
-          <span class="venue">Case Studies in Construction Materials</span>
-          <p>Replace with authors, abstract line, and a working DOI link.</p>
-        </div>
-
-        <div class="pub">
-          <span class="pub-year">2023</span>
-          <h3>Machine Learning Based Compressive Strength Modeling of Steel Fiber-Reinforced Concrete</h3>
-          <span class="venue">Scientific Reports</span>
-          <p>Machine-learning models for predicting the compressive strength of steel fiber-reinforced concrete.</p>
-          <a href="#">DOI / paper link (add yours)</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="section-head">
-      <div class="sheet-no">SHEET 04<span>Education</span></div>
-      <h2>Education</h2>
-    </div>
-    <div class="section-body">
-      <div></div>
-      <div class="content">
-
-        <div class="tl-item">
-          <div class="tl-date">2023</div>
-          <div>
-            <h3>M.Sc. in Civil Engineering — Structural Engineering</h3>
-            <span class="org">Ferdowsi University of Mashhad, Iran</span>
-            <p>Thesis: Machine Learning Based Compressive Strength Modeling of Steel Fiber-Reinforced Concrete.</p>
+    <ul class="project-list">
+      <li class="project">
+        <div class="project-index">01</div>
+        <div class="project-body">
+          <div class="project-title-row">
+            <h3 class="project-title">[Project name]</h3>
+            <span class="project-year">[2025]</span>
           </div>
+          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
+          <a href="#" class="project-link">View project</a>
         </div>
+      </li>
 
-        <div class="tl-item">
-          <div class="tl-date">2019</div>
-          <div>
-            <h3>B.Sc. in Civil Engineering</h3>
-            <span class="org">Sadjad University of Technology, Mashhad, Iran</span>
+      <li class="project">
+        <div class="project-index">02</div>
+        <div class="project-body">
+          <div class="project-title-row">
+            <h3 class="project-title">[Project name]</h3>
+            <span class="project-year">[2024]</span>
           </div>
+          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
+          <a href="#" class="project-link">View project</a>
         </div>
+      </li>
 
-      </div>
-    </div>
+      <li class="project">
+        <div class="project-index">03</div>
+        <div class="project-body">
+          <div class="project-title-row">
+            <h3 class="project-title">[Project name]</h3>
+            <span class="project-year">[2024]</span>
+          </div>
+          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
+          <a href="#" class="project-link">View project</a>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project-index">04</div>
+        <div class="project-body">
+          <div class="project-title-row">
+            <h3 class="project-title">[Project name]</h3>
+            <span class="project-year">[2023]</span>
+          </div>
+          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
+          <a href="#" class="project-link">View project</a>
+        </div>
+      </li>
+    </ul>
   </section>
 
-  <section id="experience">
-    <div class="section-head">
-      <div class="sheet-no">SHEET 05<span>Experience</span></div>
-      <h2>Research &amp; professional experience</h2>
-    </div>
-    <div class="section-body">
-      <div></div>
-      <div class="content">
-
-        <div class="tl-item">
-          <div class="tl-date">2024–Present</div>
-          <div>
-            <h3>Project Control Engineer</h3>
-            <span class="org">Gostareshe Rah &amp; Abniye Shargh Consulting Engineers Company</span>
-            <p>Project control, cost control, BOQs, construction supervision, and structural design.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-date">2022–Present</div>
-          <div>
-            <h3>Researcher — Department of Civil Engineering</h3>
-            <span class="org">Ferdowsi University of Mashhad</span>
-            <p>Research in structural engineering, machine learning, and data-driven modelling.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-date">2022</div>
-          <div>
-            <h3>Teaching Assistant — Steel Structures I &amp; II</h3>
-            <span class="org">Ferdowsi University of Mashhad</span>
-          </div>
-        </div>
-
-        <div style="margin-top:28px;">
-          <h3 style="margin-bottom:12px;">Technical skills</h3>
-          <ul class="skills-list">
-            <li>Python</li><li>TensorFlow</li><li>Scikit-learn</li><li>CatBoost</li>
-            <li>LightGBM</li><li>Keras</li><li>ETABS</li><li>SAFE</li>
-            <li>AutoCAD</li><li>Machine Learning</li><li>Deep Learning</li><li>FEM</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
+  <section id="about" class="about">
+    <h2 class="section-heading">About</h2>
+    <p class="about-text">
+      [Two or three sentences about you: your background, what you focus on now, and what drives the work.
+      Write it the way you'd introduce yourself to someone you just met — not a resume summary.]
+    </p>
+    <ul class="skills-list">
+      <li>[Skill / tool]</li>
+      <li>[Skill / tool]</li>
+      <li>[Skill / tool]</li>
+      <li>[Skill / tool]</li>
+    </ul>
   </section>
 
-  <section id="contact">
-    <div class="section-head">
-      <div class="sheet-no">SHEET 06<span>Contact</span></div>
-      <h2>Contact</h2>
+  <section id="contact" class="contact">
+    <h2 class="section-heading">Get in touch</h2>
+    <p class="contact-text">
+      [A line inviting people to reach out — e.g. "Open to freelance work and new opportunities."]
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:[email protected]">[[email protected]]</a>
+      <a href="https://linkedin.com/in/[yourprofile]" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/[yourprofile]" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <div class="section-body">
-      <div></div>
-      <div class="content">
-        <p>If you're interested in research collaboration or PhD opportunities, I'd be happy to hear from you.</p>
-        <div class="contact-links">
-          <a href="mailto:your.email@example.com">Email</a>
-          <a href="https://scholar.google.com/">Google Scholar</a>
-          <a href="https://orcid.org/">ORCID</a>
-          <a href="https://www.linkedin.com/">LinkedIn</a>
-          <a href="https://github.com/soroushpakzad">GitHub</a>
-        </div>
+
+    <!-- This form works automatically once deployed on Netlify — no backend needed. -->
+    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <input type="hidden" name="form-name" value="contact">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
       </div>
-    </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit">Send message</button>
+    </form>
   </section>
 
 </main>
 
-<footer>
-  &copy; 2026 Seyed Soroush Pakzad
+<footer class="site-footer">
+  <p>© <span id="year"></span> [Your Name]</p>
 </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
