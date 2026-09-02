@@ -1,148 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[Soroush Pakzad] — Portfolio</title>
-<meta name="description" content="[One-line description of what you do]">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soroush Pakzad | Structural Engineering & Structural Health Monitoring</title>
+  <meta name="description" content="Soroush Pakzad — Structural Engineer and researcher working on Structural Health Monitoring, machine learning, AI-enabled damage detection, and civil infrastructure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;500,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-<div class="noise-overlay" aria-hidden="true"></div>
-
-<header class="site-header">
-  <a href="#top" class="wordmark">[Soroush Pakzad]</a>
-  <nav class="main-nav" aria-label="Primary">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main id="top">
-
-  <section class="hero">
-    <p class="hero-kicker">[Structural Engineer, Researcher in the field of Structural Health Monitoring, AI-Enabled Damage Detection, Structural Vibration and Dynamics]</p>
-    <h1 class="hero-headline">
-      [Structural Engineer]
-    </h1>
-    <p class="hero-sub">
-      [Researcher in the field of Structural Health Monitoring, AI-Enabled Damage Detection, Structural Vibration and Dynamics]
-    </p>
-  </section>
-
-  <section id="work" class="work">
-    <h2 class="section-heading">Selected work</h2>
-
-    <ul class="project-list">
-      <li class="project">
-        <div class="project-index">01</div>
-        <div class="project-body">
-          <div class="project-title-row">
-            <h3 class="project-title">[Project name]</h3>
-            <span class="project-year">[2025]</span>
-          </div>
-          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
-          <a href="#" class="project-link">View project</a>
-        </div>
-      </li>
-
-      <li class="project">
-        <div class="project-index">02</div>
-        <div class="project-body">
-          <div class="project-title-row">
-            <h3 class="project-title">[Project name]</h3>
-            <span class="project-year">[2024]</span>
-          </div>
-          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
-          <a href="#" class="project-link">View project</a>
-        </div>
-      </li>
-
-      <li class="project">
-        <div class="project-index">03</div>
-        <div class="project-body">
-          <div class="project-title-row">
-            <h3 class="project-title">[Project name]</h3>
-            <span class="project-year">[2024]</span>
-          </div>
-          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
-          <a href="#" class="project-link">View project</a>
-        </div>
-      </li>
-
-      <li class="project">
-        <div class="project-index">04</div>
-        <div class="project-body">
-          <div class="project-title-row">
-            <h3 class="project-title">[Project name]</h3>
-            <span class="project-year">[2023]</span>
-          </div>
-          <p class="project-desc">[One or two sentences on what this project was, what you did, and what the outcome was.]</p>
-          <a href="#" class="project-link">View project</a>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <section id="about" class="about">
-    <h2 class="section-heading">About</h2>
-    <p class="about-text">
-      [Two or three sentences about you: your background, what you focus on now, and what drives the work.
-      Write it the way you'd introduce yourself to someone you just met — not a resume summary.]
-    </p>
-    <ul class="skills-list">
-      <li>[Skill / tool]</li>
-      <li>[Skill / tool]</li>
-      <li>[Skill / tool]</li>
-      <li>[Skill / tool]</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2 class="section-heading">Get in touch</h2>
-    <p class="contact-text">
-      [A line inviting people to reach out — e.g. "Open to freelance work and new opportunities."]
-    </p>
-
-    <div class="contact-links">
-      <a href="mailto:[email protected]">[[email protected]]</a>
-      <a href="https://linkedin.com/in/[yourprofile]" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/[yourprofile]" target="_blank" rel="noopener">GitHub</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">Soroush Pakzad</a>
+      <nav aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- This form works automatically once deployed on Netlify — no backend needed. -->
-    <form name="contact" method="POST" data-netlify="true" class="contact-form">
-      <input type="hidden" name="form-name" value="contact">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Structural Engineer & Researcher · Christchurch, New Zealand</p>
+      <h1>Intelligent structural health monitoring for safer civil infrastructure.</h1>
+      <p class="lead">
+        I work at the intersection of structural engineering, vibration and dynamics,
+        structural health monitoring, and machine learning, with a focus on data-driven
+        damage detection and resilient infrastructure.
+      </p>
+
+      <div class="hero-links">
+        <a href="https://scholar.google.com/citations?user=YgwiTZoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/soroush-pakzad-a94619196/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.researchgate.net/profile/Seyed-Soroush-Pakzad" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="mailto:soroush.pakzad@gmail.com">Email</a>
       </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    </section>
+
+    <section id="research" class="section">
+      <div class="section-label">01</div>
+      <div class="section-content">
+        <h2>Research interests</h2>
+        <div class="research-grid">
+          <article>
+            <h3>Structural Health Monitoring</h3>
+            <p>Long-term monitoring of civil infrastructure using vibration data, anomaly detection, and data-driven methods.</p>
+          </article>
+          <article>
+            <h3>Machine Learning & AI</h3>
+            <p>Unsupervised and deep learning approaches for extracting useful representations and detecting structural damage.</p>
+          </article>
+          <article>
+            <h3>Structural Dynamics</h3>
+            <p>Analysis of structural vibration, environmental and operational variability, and damage-sensitive features.</p>
+          </article>
+          <article>
+            <h3>Concrete & Fiber-Reinforced Concrete</h3>
+            <p>Machine-learning prediction of mechanical properties and experimental investigation of steel-fiber-reinforced concrete.</p>
+          </article>
+        </div>
       </div>
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="section-label">02</div>
+      <div class="section-content">
+        <div class="section-heading-row">
+          <h2>Selected publications</h2>
+          <a class="small-link" href="https://scholar.google.com/citations?user=YgwiTZoAAAAJ&hl=en" target="_blank" rel="noopener">Full profile →</a>
+        </div>
+
+        <ol class="publication-list">
+          <li>
+            <span class="pub-year">2025</span>
+            <div>
+              <h3>Early damage detection in bridges using a variational autoencoder–based hybrid unsupervised learning framework</h3>
+              <p>S. S. Pakzad & A. R. Masoodi · <em>Scientific Reports</em></p>
+              <a href="https://doi.org/10.1038/s41598-025-31115-w" target="_blank" rel="noopener">DOI →</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-year">2024</span>
+            <div>
+              <h3>A comprehensive comparison of various machine learning algorithms used for predicting the splitting tensile strength of steel fiber-reinforced concrete</h3>
+              <p>S. S. Pakzad, M. Ghalehnovi & A. Ganjifar · <em>Case Studies in Construction Materials</em></p>
+              <a href="https://doi.org/10.1016/j.cscm.2024.e03092" target="_blank" rel="noopener">DOI →</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-year">2023</span>
+            <div>
+              <h3>Comparison of various machine learning algorithms used for compressive strength prediction of steel fiber-reinforced concrete</h3>
+              <p>S. S. Pakzad, N. Roshan & M. Ghalehnovi · <em>Scientific Reports</em></p>
+              <a href="https://doi.org/10.1038/s41598-023-30606-y" target="_blank" rel="noopener">DOI →</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-year">2023</span>
+            <div>
+              <h3>Recycled steel fiber for fiber reinforced concrete production: fresh and hardened properties, cost, and ecological assessments</h3>
+              <p>N. Roshan, M. Ghalehnovi & S. S. Pakzad · <em>Journal of Building Pathology and Rehabilitation</em></p>
+              <a href="https://doi.org/10.1007/s41024-023-00270-w" target="_blank" rel="noopener">DOI →</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-year">2022</span>
+            <div>
+              <h3>Prediction of the compressive strength of concrete containing the combination of recycled and industrial steel fibers using machine learning algorithms</h3>
+              <p>S. S. Pakzad, M. Ghalehnovi & N. Roshan · Conference paper</p>
+              <a href="https://www.researchgate.net/publication/363433047_Prediction_of_the_compressive_strength_of_concrete_containing_the_combination_of_recycled_and_industrial_steel_fibers_using_machine_learning_algorithms_in_Persian" target="_blank" rel="noopener">ResearchGate →</a>
+            </div>
+          </li>
+
+          <li>
+            <span class="pub-year">2022</span>
+            <div>
+              <h3>Prediction of Chlorophyll-a Concentration using Machine Learning Algorithms</h3>
+              <p>A. Ganjifar, S. S. Pakzad, S. Danesh, M. Bahreini & D. Ganjifar · Conference paper</p>
+              <a href="https://www.researchgate.net/publication/363468363_Prediction_of_Chlorophyll-a_Concentration_using_Machine_Learning_Algorithms" target="_blank" rel="noopener">ResearchGate →</a>
+            </div>
+          </li>
+        </ol>
       </div>
-      <button type="submit">Send message</button>
-    </form>
-  </section>
+    </section>
 
-</main>
+    <section id="about" class="section">
+      <div class="section-label">03</div>
+      <div class="section-content about-layout">
+        <div>
+          <h2>About</h2>
+          <p>
+            I am a structural engineer and independent researcher based in Christchurch, New Zealand.
+            I hold an M.Sc. in Structural Engineering from Ferdowsi University of Mashhad, where my
+            research included machine learning for concrete materials and structural engineering.
+          </p>
+          <p>
+            My current research direction is focused on Structural Health Monitoring (SHM), especially
+            data-driven and unsupervised learning methods for early damage detection in civil infrastructure.
+            I am interested in developing practical, interpretable, and robust AI methods that can operate
+            under real-world environmental and operational variability.
+          </p>
+        </div>
 
-<footer class="site-footer">
-  <p>© <span id="year"></span> [Your Name]</p>
-</footer>
+        <aside class="facts">
+          <div>
+            <span>Location</span>
+            <strong>Christchurch, New Zealand</strong>
+          </div>
+          <div>
+            <span>Degree</span>
+            <strong>M.Sc. Structural Engineering</strong>
+          </div>
+          <div>
+            <span>Institution</span>
+            <strong>Ferdowsi University of Mashhad</strong>
+          </div>
+          <div>
+            <span>Research focus</span>
+            <strong>SHM · ML · AI · Structural Dynamics</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <section class="section profiles">
+      <div class="section-label">04</div>
+      <div class="section-content">
+        <h2>Academic profiles</h2>
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=YgwiTZoAAAAJ&hl=en" target="_blank" rel="noopener">
+            <span>Google Scholar</span><small>Publications & citations →</small>
+          </a>
+          <a href="https://www.researchgate.net/profile/Seyed-Soroush-Pakzad" target="_blank" rel="noopener">
+            <span>ResearchGate</span><small>Research profile & full texts →</small>
+          </a>
+          <a href="https://www.linkedin.com/in/soroush-pakzad-a94619196/" target="_blank" rel="noopener">
+            <span>LinkedIn</span><small>Professional profile →</small>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section id="contact" class="section contact">
+      <div class="section-label">05</div>
+      <div class="section-content">
+        <h2>Contact</h2>
+        <p class="contact-lead">For research collaboration, PhD opportunities, or academic inquiries:</p>
+        <div class="contact-card">
+          <a href="mailto:soroush.pakzad@gmail.com">soroush.pakzad@gmail.com</a>
+          <span>Christchurch, New Zealand</span>
+          <a href="tel:+64224580435">+64 22 458 0435</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <span>© <span id="year"></span> Soroush Pakzad</span>
+      <span>Structural Engineering · AI · Structural Health Monitoring</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
